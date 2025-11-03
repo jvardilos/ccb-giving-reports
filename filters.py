@@ -13,8 +13,8 @@ def fix_non_members(cols):
 
 
 def convert_to_dollar(df):
-    df[Column.PLEDGED] = df[Column.PLEDGED].apply(lambda x: f"${float(x):.2f}")
-    df[Column.GIVEN] = df[Column.GIVEN].apply(lambda x: f"${float(x):.2f}")
+    df[Column.PLEDGED] = df[Column.PLEDGED].apply(lambda x: f"${float(x):,.2f}")
+    df[Column.GIVEN] = df[Column.GIVEN].apply(lambda x: f"${float(x):,.2f}")
 
     return df
 
