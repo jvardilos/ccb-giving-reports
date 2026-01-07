@@ -55,9 +55,10 @@ def filter_pledgers_and_givers(df):
         print("given amount:            ", g_sum)
         print("given amount deficit:    ", g_sum - given)
         print("total given:             ", pg_sum + g_sum)
-        print("summary given:           ", pledge + given)
+        print("summary given:         x ", pledge + given)
         print("total given original df: ", og)
-        print("deceased people's figure ", pledge + given - og)
+        print("total given deficit:     ", pg_sum + g_sum - (pledge + given))
+        print("excluded people's figure ", pledge + given - og)
 
     dollar_pledged_givers = convert_to_dollar(pledged_givers)
     dollar_givers = convert_to_dollar(givers)
